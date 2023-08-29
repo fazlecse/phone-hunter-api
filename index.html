@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunting</title>
+    <!-- Daisy and Tailwindcss link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body>
+    <main class="container mx-auto">
+        <section>
+            <h2 class="text-6xl my-10 text-white text-center">Hunting Phone</h2>
+            <!-- Search box -->
+            <div class="bg-gray-100 p-5 mb-5 rounded-xl text-center">
+                <input id="input-field" type="text" placeholder="Type here"
+                    class="input input-bordered w-full max-w-xs" />
+                <button onclick="handleSearch()" class="btn btn-secondary">Search...</button>
+            </div>
+            <!-- Loader -->
+            <div id="loading-spinner" class="text-center my-40 hidden">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+            <!-- Search result -->
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Show all button -->
+            </div>
+            <div id="show-all-container" class="text-center hidden mt-8">
+                <button onclick="handleShowAll()" class="btn btn-secondary">Show all</button>
+            </div>
+        </section>
+
+
+
+
+        <!-- Modal start -->
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="showDetails" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" id="modal-container" class="modal-box text-center">
+                
+            </form>
+        </dialog>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
